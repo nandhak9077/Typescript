@@ -1,3 +1,19 @@
+/******************************************************************************
+ *  Execution       :   1. default node          : cmd> node primeNoDs.ts
+ *                      2. if nodemon installed  : cmd> nodemon primeNoDs.ts
+ *                         -nodemon helps in restart the program after every changes.
+ *
+ *  Purpose         :   Used to calculate the power of numbers from user input.
+ *
+ *  @description
+ *
+ *  @file           : primeNoDs.ts
+ *  @overview       : Use random numbers to generate power of numbers.
+ *  @author         : Nandhakumar <nandhak907@gmail.com>
+ *  @version        : 1.0
+ *  @since          : 11-mar-2019
+ *
+ ******************************************************************************/
 var req = require('util');
 var utility = require('../typeScript/Util/utility');
 var array = [["0-100 "], ["100-200  "], ["200-300 "], ["300-400 "], ["400-500 "], ["500-600 "], ["600-700 "], ["700-800 "], ["800-900 "], ["900-1000 "]];

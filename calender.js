@@ -1,3 +1,19 @@
+/******************************************************************************
+ *  Execution       :   1. default node          : cmd> node calender.ts
+ *                      2. if nodemon installed  : cmd> nodemon calender.ts
+ *                         -nodemon helps in restart the program after every changes.
+ *
+ *  Purpose         :   Used to calculate the power of numbers from user input.
+ *
+ *  @description
+ *
+ *  @file           : calender.ts
+ *  @overview       : Use random numbers to generate power of numbers.
+ *  @author         : Nandhakumar <nandhak907@gmail.com>
+ *  @version        : 1.0
+ *  @since          : 11-Mar-2019
+ *
+ ******************************************************************************/
 var take = require('util');
 var Utility = require('../typeScript/Util/utility');
 var read = require('readline-sync');
