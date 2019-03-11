@@ -58,5 +58,37 @@ module.exports = {
         else {
             console.log("Invalid number.....  :( ");
         }
+    },
+    swapNibble: function (mainstr) {
+        var tempString = mainstr.substring(0, 4);
+        mainstr = mainstr.substring(4, 8);
+        mainstr = mainstr + tempString;
+        return mainstr;
+    },
+    findNumber: function (low, high, read) {
+        var mid = low + Math.floor((high - low) / 2);
+        console.log(mid);
+        if (low < high) {
+            if (low == high - 1) {
+                var c;
+                c = read.question("Is the number " + low + " if yes, press 'Y'. Else Press 'N' : ");
+                if (c == 'y')
+                    return low;
+                if (c == 'n')
+                    return high;
+            }
+            c = read.question("Is the number " + mid + -+high + " if yes, press 'Y'. Else Press 'N' : ");
+            if (c == 'y')
+                mid = this.findNumber(mid, high, read);
+            if (c == 'n')
+                mid = this.findNumber(low, mid - 1, read);
+        }
+        return mid;
+    },
+    monthlyPayment: function (principal, year, rate) {
+        var n = 12 * year;
+        var r = (rate / (12 * 100));
+        var payment = ((principal * r) / ((1 - Math.pow((1 + r), -n))));
+        console.log("Your EMI for every month is : " + payment);
     }
 };

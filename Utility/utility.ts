@@ -86,6 +86,44 @@ module.exports={
     {
         console.log("Invalid number.....  :( ");
     }
-  }
+  },
+  
+  swapNibble(mainstr:string) :string{
+    var tempString :string= mainstr.substring(0, 4);
+    mainstr = mainstr.substring(4, 8);
+    mainstr = mainstr + tempString;
+    return mainstr;
+},
+findNumber(low:any,high:any,read:any):number
+{
+    var mid:number = low + Math.floor((high - low)/2)
+    console.log(mid)
+    if (low<high)
+    {
+        if(low==high-1)
+        {
+            var c;
+            c= read.question("Is the number "+low +" if yes, press 'Y'. Else Press 'N' : ")
+            if(c=='y')
+            return low;
+            if(c=='n')
+            return high;
+        }
+        c = read.question("Is the number "+mid+-+high+" if yes, press 'Y'. Else Press 'N' : ")
+        if(c=='y')
+        mid = this.findNumber(mid, high, read)
+        if(c=='n')
+        mid = this.findNumber(low, mid-1, read)
+    }
+    return mid;
+},
+monthlyPayment(principal:number, year:number, rate:number) {
+    var n:number = 12 * year;
+    var r:number = (rate / (12 * 100));
+    var payment:number= ((principal * r) / ((1 - Math.pow((1 + r), -n))));
+    console.log("Your EMI for every month is : " + payment);
+},
+
+
 
 }
